@@ -6,3 +6,30 @@ Version: 0.0.1
 Tags: wartburgia, vrijwillgers, vacatures, sportclub, voetbalclub, amsterdam
 */
 
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    color: #CB0D07;
+}
+
+h2 {
+    margin-top: 3rem;
+
+    color: white;
+    text-shadow: -1px 0 #CB0D07, 0 1px #CB0D07, 1px 0 #CB0D07, 0 -1px #CB0D07;
+}
+
+h3 {
+    margin-top: 1.5rem; 
+
+    color: #CB0D07;
+}
+
+.footer
+{
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #EEE;
+}
