@@ -3,7 +3,9 @@
         <h3><?php the_title(); ?></h3>
     </div>
     <div class="homepage-functie-afbeelding">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/img/functie-open.png" class="image-fluid" />
+        <?php if ( has_post_thumbnail() ) {
+            the_post_thumbnail();
+        } ?>
     </div>
     <div class="homepage-functie-omschrijving">
         <?php the_excerpt(); ?>
