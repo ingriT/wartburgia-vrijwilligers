@@ -9,10 +9,10 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css" />
     </head>
     <body>
-        <div class="container-fluid" style="height: 10em;text-align: center;background-image: url('img/wb-vrijwilligers-header.png');background-position: 50% 50%;">
+        <div class="container-fluid" style="height: 10em;text-align: center;background-image: url('<?php echo get_bloginfo('template_directory'); ?>/img/wb-vrijwilligers-header.png');background-position: 50% 50%;">
         </div>
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
             <div class="container">
@@ -23,19 +23,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Vrijwilligers</a>
+                            <a class="nav-link" href="index.php">Vrijwilligers</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="functie.html">Functies <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="functie.php">Functies <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Informatie</a>
+                            <a class="nav-link" href="index.php">Informatie</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.php">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -75,15 +75,15 @@
                         Dit is een nieuwe functie binnen het bestuur waar nog geen invulling aan gegeven is.
                     </p>
                     <p>
-                        <a href="contact.html" class="btn btn-primary" role="button">Aanmelden</a>
+                        <a href="contact.php" class="btn btn-primary" role="button">Aanmelden</a>
                     </p>
                 </div>
                 <div class="col-4">
                     <p>
                         <strong>Huidige invulling</strong><br/>
-                        <img src="img/functie-open.png" class="image-fluid" />
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/img/functie-open.png" class="image-fluid" />
                         <br/><br/>Vrijwilliger gezocht<br/><br/>
-                        <a href="contact.html" class="btn btn-primary" role="button">Aanmelden</a>
+                        <a href="contact.php" class="btn btn-primary" role="button">Aanmelden</a>
                     </p>
                 </div>
             </div>
@@ -95,8 +95,8 @@
                 <div class="row">
                     <div class="col">
                         <strong>&copy; Wartburgia 2017</strong><br/><br/>
-                        <a href="functie.html">Vacatures</a><br/>
-                        <a href="index.html">Informatie</a>
+                        <a href="functie.php">Vacatures</a><br/>
+                        <a href="index.php">Informatie</a>
                     </div>
                 </div>
             </div>
