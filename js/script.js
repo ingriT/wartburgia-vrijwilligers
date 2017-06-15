@@ -13,4 +13,6 @@ $(document).ready(function(e) {
 
     $('.submit').addClass('btn');
     $('.submit').addClass('btn-primary');
+
+    $(".attachment-post-thumbnail ").addClass("img-fluid");
 });

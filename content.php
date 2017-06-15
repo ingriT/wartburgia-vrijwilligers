@@ -1,4 +1,4 @@
-<div class="col homepage-functie">
+<div class="col-4 homepage-functie">
     <div class="homepage-functie-titel">
         <h3><?php the_title(); ?></h3>
     </div>
