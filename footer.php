@@ -3,8 +3,8 @@
                 <div class="row">
                     <div class="col">
                         <strong>&copy; Wartburgia 2017</strong><br/><br/>
-                        <a href="functie.php">Vacatures</a><br/>
-                        <a href="index.php">Informatie</a>
+                        <a href="/vacatures">Vacatures</a><br/>
+                        <a href="/informatie">Informatie</a>
                     </div>
                 </div>
             </div>

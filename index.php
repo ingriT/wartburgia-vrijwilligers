@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2>Uitgelichte vacatures</h2>
+            <h2>Uitgelichte functies</h2>
         </div>
     </div>
     <div class="row">

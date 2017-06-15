@@ -3,12 +3,12 @@
 } ?>
 <div id="comments" class="comments-area">
     <?php if ( have_comments() ) : ?>
-        <h3 class="comments-title">
+        <p><strong>
             <?php
-            printf( _nx( 'One comment on “%2$s”', '%1$s comments on “%2$s”', get_comments_number(), 'comments title'),
+            printf( _nx( 'Eén reactie op “%2$s”', '%1$s reacties op “%2$s”', get_comments_number(), 'comments title'),
                 number_format_i18n( get_comments_number() ), get_the_title() );
             ?>
-        </h3>
+        </strong></p>
         <ul class="comment-list">
             <?php 
             wp_list_comments( array(
