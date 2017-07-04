@@ -11,9 +11,18 @@
         <?php wp_head();?>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.9&appId=339493943137775";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <a href="/">
-        <div class="container-fluid page-header" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/img/wb-vrijwilligers-header.png');">
-        </div>
+            <div class="container-fluid page-header" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/img/wb-vrijwilligers-header.png');">
+            </div>
         </a>
         <div class="container-fluid navbg bg-faded">
             <div class="container">
@@ -32,5 +41,17 @@
                         </ul>
                     </div>
                 </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="fb-button">
+                <div class="fb-share-button" 
+                    data-href="<?php get_permalink() ?>" 
+                    data-layout="button" data-size="large" data-mobile-iframe="true">
+                    <a class="fb-xfbml-parse-ignore" target="_blank" 
+                        href="https://www.facebook.com/sharer/sharer.php?u=<?php get_permalink() ?>&amp;src=sdkpreparse">
+                        Delen
+                    </a>
+                </div>
             </div>
         </div>

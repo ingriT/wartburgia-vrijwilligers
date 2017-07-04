@@ -8,11 +8,15 @@
     </div>
     <div class="row">
         <div class="col">
-            <p>Wartburgia is een gezellige zaterdag voetbalclub, met een leuke mengeling van vrouwen en mannen seniorenteams. Er zijn 11 herenteams, waaronder 3 veteranen (2 x 35+ en 1 x 45+) en 8 damesteams waarvan 2 veterinnen (35+) zeventallen. 
-            De trainingen zijn op maandag- en woensdagavond.<br/>
-            Ook hebben wij een florerende zaalafdeling, met 2 herenteams en 11 damesteams, spelend op wisselende avonden. 
-            </p><p>
-            Kom een keer kijken of neem contact met ons op, als je op zoek bent naar een leuke zaterdagclub. Zaalvoetbal bieden wij alleen aan als extra service voor onze veldleden.</p>
+            <p>
+                Welkom op de site over de vrijwilligers van Wartburgia!</p>
+            <p>
+                Wartburgia is een vereniging en leeft dus bij de gratie van vrijwilligers. Lid zijn van Wartburgia betekent lid zijn van 
+                een vereniging en houdt ook in dat iedereen zich inzet, langdurig of eenmalig, veel uren of maar een paar, het maakt 
+                niet uit. Maar al onze leden zijn onderdeel van onze vereniging!</p>
+            <p>
+                Op deze site vind je de totale organisatiestructuur van Wartburgia (ingevuld door vrijwilligers), met een omschrijving 
+                per functie, door wie de functie wordt ingevuld of dat hij nog vrij is. </p>
         </div>
     </div>
 </div>

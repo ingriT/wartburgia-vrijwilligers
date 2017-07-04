@@ -7,8 +7,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-
+        <div class="col-md-10">
 <?php 
     if ( have_posts() ) : while ( have_posts() ) : the_post();
         get_template_part( 'content-single', get_post_format() );
@@ -35,34 +34,59 @@
             echo($organisatie);
         }
         
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
-
     endwhile; endif; 
 ?>
         </div>
-        <div class="col-4">
+        <div class="col-md-2">
             <p>
                 <strong>Huidige invulling</strong><br/>
 <?php
-
         $ingevuld = get_field('ingevulde_functie');
 
-        if ($ingevuld) 
+        $afbeelding_huidige_vrijwilliger = get_field('afbeelding_huidige_vrijwilliger');
+
+        if (!$ingevuld)
         {   ?>
-            <img src="<?php the_field('afbeelding_huidige_vrijwilliger'); ?>" />
-            <br/><br/><?php
-            the_field('huidige_invulling');            
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/img/functie-open.png" class="img-fluid" />
+            <?php
         }
-        else
+        else if (isset($afbeelding_huidige_vrijwilliger) && !trim($afbeelding_huidige_vrijwilliger)=='')
+        { 
+            echo('<img src="' . $afbeelding_huidige_vrijwilliger .'" class="img-fluid" />');
+        }
+
+        $huidige_invulling = get_field('huidige_invulling');
+        if (isset($huidige_invulling) && !trim($huidige_invulling)=='')
+        { 
+            echo($huidige_invulling . '<br/><br/>');
+        }
+
+        $extra_informatie_vrijwilligers = get_field('extra_informatie_vrijwilligers');
+        if (isset($extra_informatie_vrijwilligers) && !trim($extra_informatie_vrijwilligers)=='')
+        { 
+            echo($extra_informatie_vrijwilligers);
+        }
+
+        if (!$ingevuld) 
         {   ?>
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/img/functie-open.png" class="image-fluid" />
             <br/><br/>Vrijwilliger gezocht<br/><br/>
             <a href="/aanmelden" class="btn btn-primary" role="button">Aanmelden</a>    <?php
         }   ?>
 
             </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+        <?php 
+            if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+                if ( comments_open() || get_comments_number() ) :
+                    comments_template();
+                endif;
+
+            endwhile; endif; 
+        ?>
         </div>
     </div>
 </div>

@@ -6,15 +6,53 @@ Version: 0.0.1
 Tags: wartburgia, vrijwillgers, vacatures, sportclub, voetbalclub, amsterdam
 */
 
+.navbar {
+    padding-left: 0;
+}
+
+.nav-item:first-child {
+    margin-left: 0;
+}
+
 .navbar.bg-faded,
 .navbg.bg-faded {
     background-color: #CB0D07;
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: #000;
+    color: #000;
+}
+
+.btn-outline-primary {
+    color: #000;
+    border-color: #000;
+}
+
+.btn-outline-primary:hover {
+    background-color: #000;
+    color: #FFF;
+    border-color: #000;
 }
 
 .nav-item {
     background-color: #000;
     margin: .5rem;
     padding: .15rem;
+    border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+}
+
+.fb-button {
+    padding-top: 2rem;
+    float: right;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -29,6 +67,19 @@ Tags: wartburgia, vrijwillgers, vacatures, sportclub, voetbalclub, amsterdam
 .navbar-light .navbar-nav .nav-link.open, 
 .navbar-light .navbar-nav .open>.nav-link {
     color: #CCC;
+}
+
+.functie-overzicht .row {
+    padding-bottom: 2rem;
+}
+
+.functie-overzicht .row .col-2 {
+    word-wrap: break-word;
+}
+
+.functie-overzicht .row .col-2 a {
+    margin-bottom: .5rem;
+    display: inline-block;
 }
 
 h1 {

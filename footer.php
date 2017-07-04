@@ -3,8 +3,7 @@
                 <div class="row">
                     <div class="col">
                         <strong>&copy; Wartburgia 2017</strong><br/><br/>
-                        <a href="/vacatures">Vacatures</a><br/>
-                        <a href="/informatie">Informatie</a>
+                        <?php wp_list_pages( '&title_li=' ); ?>
                     </div>
                 </div>
             </div>

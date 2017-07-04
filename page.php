@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-md-10">
 
 <?php 
     if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -15,14 +15,13 @@
     endwhile; endif; 
 ?>
         </div>
-        <div class="col-4">
+        <div class="col-md-2">
             <p>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/img/wartlogo.gif" class="image-fluid" />
+                <img src="<?php echo get_bloginfo('template_directory'); ?>/img/wartlogo_2.png" class="img-fluid" />
             </p>
             <p>
-                <strong>Contact gegevens</strong><br/>
-                <a href="mailt:bestuur@wartburgia.nl">bestuur@wartburgia.nl</a><br/>
-                <a href="tel:06-12345678">06-12345678</a><br/>
+                <strong>Contact</strong><br/>
+                <a href="mailto:bestuur@asvwartburgia.nl">bestuur@asvwartburgia.nl</a><br/>
             </p>
         </div>
     </div>
