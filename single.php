@@ -7,20 +7,20 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-8">
 <?php 
     if ( have_posts() ) : while ( have_posts() ) : the_post();
         get_template_part( 'content-single', get_post_format() );
 
         $verantwoordelijkheden = get_field('verantwoordelijkheden');
-        if (isset($verantwoordelijkheden) || !trim($verantwoordelijkheden)==='')
+        if (isset($verantwoordelijkheden) || !trim($verantwoordelijkheden)=='')
         { 
             echo('<h2>Verantwoordelijkheden</h2>');
             echo($verantwoordelijkheden);
         }
 
         $tijdsinspanning = get_field('tijdsinspanning');
-        if (isset($tijdsinspanning) || !trim($tijdsinspanning)==='')
+        if (isset($tijdsinspanning) || !trim($tijdsinspanning)=='')
         { 
             echo('<h2>Tijdsinspanning</h2>');
             echo($tijdsinspanning);
@@ -28,21 +28,40 @@
 
 
         $organisatie = get_field('organisatie');
-        if (isset($organisatie) || !trim($organisatie)==='')
+        if (isset($organisatie) || !trim($organisatie)=='')
         { 
-            echo('<h2>Organisatie</h2>');
+            echo('<h2>Overleg</h2>');
             echo($organisatie);
         }
         
+        $extra_informatie_vrijwilligers = get_field('extra_informatie_vrijwilligers');
+        if (isset($extra_informatie_vrijwilligers) && !trim($extra_informatie_vrijwilligers)=='')
+        { 
+            $ingevuld = get_field('ingevulde_functie');    
+            $afbeelding_huidige_vrijwilliger = get_field('afbeelding_huidige_vrijwilliger');
+            $huidige_invulling = get_field('huidige_invulling');
+
+            echo('<h2 id="more" name="more">Huidige invulling</h2>');
+            if ($ingevuld && isset($afbeelding_huidige_vrijwilliger) && !trim($afbeelding_huidige_vrijwilliger)=='')
+            { 
+                echo('<p><img src="' . $afbeelding_huidige_vrijwilliger .'" class="img-fluid" style="max-width: 300px;" /></p>');
+            }
+            if (isset($huidige_invulling) && !trim($huidige_invulling)=='')
+            { 
+                echo('<p><strong>' . $huidige_invulling . '</strong></p>');
+            }
+
+            echo($extra_informatie_vrijwilligers);
+        }
+
     endwhile; endif; 
 ?>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
             <p>
                 <strong>Huidige invulling</strong><br/>
 <?php
-        $ingevuld = get_field('ingevulde_functie');
-
+        $ingevuld = get_field('ingevulde_functie');    
         $afbeelding_huidige_vrijwilliger = get_field('afbeelding_huidige_vrijwilliger');
 
         if (!$ingevuld)
@@ -60,11 +79,15 @@
         { 
             echo($huidige_invulling . '<br/><br/>');
         }
+        else if ($ingevuld) 
+        {
+            echo('Ingevuld');
+        }
 
         $extra_informatie_vrijwilligers = get_field('extra_informatie_vrijwilligers');
         if (isset($extra_informatie_vrijwilligers) && !trim($extra_informatie_vrijwilligers)=='')
         { 
-            echo($extra_informatie_vrijwilligers);
+            echo('<a href="#more" class="btn btn-primary">Lees meer</a>');
         }
 
         if (!$ingevuld) 
